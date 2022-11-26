@@ -6,9 +6,9 @@ const manifest = {
   short_name: pkg.name,
   description: pkg.description,
   version: pkg.version,
-  applications: {
+  browser_specific_settings: {
     gecko: {
-      strict_min_version: "54.0",
+      strict_min_version: "55.0",
     },
   },
   chrome_settings_overrides: {

@@ -38,7 +38,7 @@ export interface Image {
 const IMAGE_CACHE_KEY = "bg-data"
 
 const fetchImageAPI = async (): Promise<ImageFetchData[]> => {
-  let res = await fetch(
+  const res = await fetch(
     "https://api.unsplash.com/photos/random?query=scenery&orientation=landscape&count=30",
     {
       headers: {
@@ -58,13 +58,13 @@ export const getBackgroundImage = async (): Promise<Image> => {
       type: "fetch-bg",
     })
   }
-  let idx = dayjs().diff(dayjs(data.timestamp), "day")
+  const idx = dayjs().diff(dayjs(data.timestamp), "day")
   return data.images[idx]
 }
 
 export const fetchBackgroundImage = async () => {
-  let raw = await fetchImageAPI()
-  let data: ImageCacheData = {
+  const raw = await fetchImageAPI()
+  const data: ImageCacheData = {
     images: raw.map((v) => ({
       imageURL: `${v.urls.raw}&q=80&h=1440&fm=webp`,
       imageLink: `${v.links.html}?utm_source=${APP_NAME}&utm_medium=referral`,
