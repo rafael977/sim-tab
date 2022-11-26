@@ -1,4 +1,4 @@
-import pkg from "../package.json"
+import pkg from "./package.json"
 
 const manifest = {
   manifest_version: 2,
@@ -8,7 +8,6 @@ const manifest = {
   version: pkg.version,
   applications: {
     gecko: {
-      id: "extension@simtab.io",
       strict_min_version: "54.0",
     },
   },
@@ -19,7 +18,7 @@ const manifest = {
     newtab: "./src/index.html",
   },
   background: {
-    scripts: ["./src/background/index.js"],
+    scripts: ["./src/background/index.ts"],
     persistent: false,
   },
   permissions: ["storage", "topSites"],
