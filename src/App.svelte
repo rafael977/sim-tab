@@ -13,7 +13,7 @@
     padding: 8px;
     box-sizing: border-box;
     width: 100vw;
-    height: 97vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

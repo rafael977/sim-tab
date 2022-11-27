@@ -63,12 +63,12 @@
     padding: 8px 2px 0;
     display: flex;
     align-items: center;
-    max-width: 3.5rem;
+    max-width: 5rem;
   }
 
   .top-site__title span {
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

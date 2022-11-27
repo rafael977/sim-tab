@@ -6,10 +6,12 @@
 
 {#if bgImage}
   <div class="bg-attribute">
-    <div class="bg-attribute__location">
-      <i class="fa-regular fa-location-dot" />
-      {bgImage.location}
-    </div>
+    {#if bgImage.location}
+      <div class="bg-attribute__location">
+        <i class="fa-regular fa-location-dot" />
+        {bgImage.location}
+      </div>
+    {/if}
     <div class="bg-attribute__links">
       Photo by <a href={bgImage.user.profileLink}>{bgImage.user.name}</a> on
       <a href={bgImage.imageLink}>Unsplash</a>
@@ -26,16 +28,16 @@
     font-size: 14px;
     font-family: sans-serif;
     text-shadow: 1px 1px var(--text-shadow-color);
-    text-decoration: underline;
   }
 
   .bg-attribute__location {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-bottom: solid 1px;
   }
 
   .bg-attribute__links {
-    padding: 0.5rem 2rem;
+    margin: 0.5rem 2rem;
   }
 
   .bg-attribute__links a {

@@ -23,7 +23,9 @@
   .top-sites {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    max-width: 75vw;
+    width: fit-content;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     grid-gap: 0.5rem;
   }
 </style>
