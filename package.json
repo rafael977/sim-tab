@@ -3,12 +3,13 @@
   "displayName": "Sim Tab",
   "description": "My simple new tab override extension",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "build": "vite build",
     "build:watch": "vite build --watch",
-    "serve:firefox": "web-ext run --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/"
+    "serve:firefox": "web-ext run --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/",
+    "package": "vite build && web-ext build --source-dir ./dist"
   },
   "devDependencies": {
     "@samrum/vite-plugin-web-extension": "^2.2.0",
