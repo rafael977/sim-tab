@@ -3,7 +3,7 @@
   "displayName": "Sim Tab",
   "description": "My simple new tab override extension",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "build": "vite build",
