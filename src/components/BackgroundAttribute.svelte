@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Image } from "../lib/bgImage"
+  import LocationIcon from "../assets/location-dot-solid.svg?component"
 
   export let bgImage: Image
 </script>
@@ -8,7 +9,7 @@
   <div class="bg-attribute">
     {#if bgImage.location}
       <div class="bg-attribute__location">
-        <i class="fa-regular fa-location-dot" />
+        <LocationIcon width="14px" height="14px" fill="white" />
         {bgImage.location}
       </div>
     {/if}
@@ -31,13 +32,19 @@
   }
 
   .bg-attribute__location {
-    margin-left: 2rem;
     margin-right: 2rem;
     border-bottom: solid 1px;
   }
 
+  .bg-attribute__location span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    fill: white;
+  }
+
   .bg-attribute__links {
-    margin: 0.5rem 2rem;
+    margin: 0.5rem 2rem 0.5rem 0;
   }
 
   .bg-attribute__links a {

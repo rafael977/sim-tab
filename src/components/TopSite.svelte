@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { TopSites } from "webextension-polyfill"
+  import UnknownFavicon from "../assets/circle-question-solid.svg?component"
 
   export let site: TopSites.MostVisitedURL
 </script>
@@ -9,7 +10,11 @@
     {#if site.favicon}
       <img src={site.favicon} alt="" />
     {:else}
-      <i class="fa-solid fa-circle-question fa-2xl" />
+      <UnknownFavicon
+        width="32px"
+        height="32px"
+        fill="rgba(102, 102, 102, 0.75)"
+      />
     {/if}
   </div>
   <div class="top-site__title">
@@ -55,8 +60,10 @@
     border-radius: 8px;
   }
 
-  .top-site__favicon i {
-    color: rgba(102, 102, 102, 0.75);
+  .top-site__favicon span {
+    width: 32px;
+    height: 32px;
+    fill: rgba(102, 102, 102, 0.75);
   }
 
   .top-site__title {

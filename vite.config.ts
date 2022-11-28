@@ -1,5 +1,6 @@
 import { defineConfig } from "vite"
 import { svelte } from "@sveltejs/vite-plugin-svelte"
+import svelteSVG from "vite-plugin-svelte-svg"
 import webExtension from "@samrum/vite-plugin-web-extension"
 import getManifest from "./manifest"
 
@@ -10,6 +11,10 @@ export default defineConfig({
   },
   plugins: [
     svelte(),
+    svelteSVG({
+      svgoConfig: {},
+      requireSuffix: true,
+    }),
     webExtension({
       manifest: getManifest(),
     }),
