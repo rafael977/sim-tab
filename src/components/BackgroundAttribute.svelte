@@ -36,13 +36,6 @@
     border-bottom: solid 1px;
   }
 
-  .bg-attribute__location span {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    fill: white;
-  }
-
   .bg-attribute__links {
     margin: 0.5rem 2rem 0.5rem 0;
   }

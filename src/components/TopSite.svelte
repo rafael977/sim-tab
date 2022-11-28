@@ -60,12 +60,6 @@
     border-radius: 8px;
   }
 
-  .top-site__favicon span {
-    width: 32px;
-    height: 32px;
-    fill: rgba(102, 102, 102, 0.75);
-  }
-
   .top-site__title {
     padding: 8px 2px 0;
     display: flex;
